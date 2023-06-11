@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root {
+    --fontImd-P: 1.9em;
+    --fontDoNome-G: 60px; 
+    --fontDoTextBanner: 30px;
+    --fontDaImgBanner: 6em;
+
+}
+
+body {
+    background-color: rgb(34, 31, 31);
+    overflow-x: hidden;
+    background-color: #1a1919;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-bottom: 150px;
+}
+
+#menuStaick {
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+#sectionMenu {
+    width: inherit;
+    height: inherit;
+    transition: .4s;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0px 150px;
+}
+
+.menuAnimetion {
+    background-color: rgba(0, 0, 0, 0.925);
+    transform: translateY(-70px);
+}
+
+#menuLeft {
+    display: flex;
+    align-items: center;
+}
+
+.logotipo {
+    display: flex;
+    color: #CBB26A;
+}
+
+.areaNameText {
+    display: flex;
+    align-items: center;
+}
+
+.logotipo .img {
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid #CBB26A;
+    font-size: var(--fontImd-P);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#menuRigth {
+    display: flex;
+
+}
+
+a:has(.itensMenu) {
+    text-decoration: none;
+    color: white;
+}
+
+a:has(.itensMenu):hover {
+    transition: all ease 0.3s;
+    opacity: 0.7;
+}
+
+.itensMenu {
+    width: 100px;
+    height: calc(100% - 5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.show {
+    border-bottom: 5px solid #CBB26A;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.322);
+    color: #CBB26A;
+}
+
+#botao-menu {
+    height: 30px;
+    width: 100%;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.blockMenu {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+}
+#backgroundImage {
+    background-image: url("imagens/pexels-pixabay-265152.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.panoPreto {
+    background-color: rgba(0, 0, 0, 0.877);
+}
+
+#container {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+[data-mostrar="primeiro"] {
+    transition: 2.3s;
+    opacity: 0;
+    transform: translate3d(-100vw, 0px, 0px);
+}
+
+[data-mostrar="segundo"] {
+    transition: 3s;
+    opacity: 0;
+    transform: translate3d(-100vw, 0px, 0px);
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translate3d(0vw, 0px, 0px);
+}
+
+#section-banner {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--fontDoTextBanner);
+}
+
+.autoEscrita {
+    font-size: var(--fontDoNome-G);
+    display: flex;
+    color: #CBB26A;
+}
+
+.marcador {
+    background-color: blue;
+    max-height: 60px;
+    width: 5px;
+}
+
+#image {
+    min-width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    box-sizing: content-box;
+    padding: 20px;
+    margin: 10px;
+    font-size: var(--fontDaImgBanner);
+    border: 5px solid #CBB26A;
+    border-radius: 50%;
+    color: #665112;
+}
+
+#section-buttons-contact {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: .4s;
+}
+
+#section-botao {
+    transition: all ease .5s;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.redesSociais {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.redesSociais img {
+    cursor: pointer;
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+}
+
+.mostrarEsconder {
+    transition: all ease .5s;
+    cursor: pointer;
+    font-size: 2em;
+    color: rgba(0, 47, 255, 0.445);
+    padding: 10px;
+    transform: rotate(180deg);
+}
+
+.redesSociais img:hover {
+    transition: all ease 0.3s;
+    opacity: 0.7;
+}
+
+#section-sobre {
+    padding: 50px 0px;
+}
+
+#area-sobre {
+    display: flex;
+    align-items: end;
+    max-width: 1000px;
+}
+
+#habilidades {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: rgba(68, 68, 68, 0.733);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.801);
+}
+
+.imgGrande {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: #CBB26A;
+    border: 4px solid #CBB26A;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#area-habilidades {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.habilidade {
+    color: rgba(255, 174, 0, 0.973);
+}
+
+@keyframes background-nivel {
+    0% {
+        background-position: 0%, 50%;
+    }
+
+    50% {
+        background-position: 100%, 0%;
+    }
+
+    100% {
+        background-position: 0%, 50%;
+    }
+}
+
+.nivel {
+    animation: background-nivel 10s infinite;
+    margin-top: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, blue, rgb(36, 159, 216), blue);
+    background-size: 300% 300%;
+}
+#localizacao {
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+#experiencias {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 10px;
+}
+
+#title {
+    font-size: 1.9em;
+    text-align: center;
+    font-weight: 600;
+}
+
+#area-project {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+#projeto {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgb(53, 54, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#projeto:hover {
+    opacity: 0.7;
+}
+
+#section-contatos {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info-contato {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styleInput {
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #0000002d;
+    border: none;
+    margin: 10px;
+    font-size: 1.2em;
+    width: 100%;
+    outline: none;
+}
+
+#button-form {
+    margin-top: 30px;
+    font-size: 1.3em;
+    padding: 10px 15px;
+    border-radius: 14px;
+    border: none;
+    color: rgba(255, 255, 255, 0.562);
+    background-color: #00000069;
+    box-shadow: 0px 0px 10px rgba(20, 187, 216, 0.815);
+}
+
+#button-form:hover {
+    opacity: 0.7;
+}
+
+@media (max-width:950px) {
+    #section-banner {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .marcador {
+        display: none;
+    }
+
+    #area-sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #area-project {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 840px) {
+    #sectionMenu {
+        padding: 0px 70px;
+    }
+    :root {
+        --fontImd-P: 1.9em;
+        --fontDoNome-G: 40px; 
+        --fontDoTextBanner: 20px;
+        --fontDaImgBanner: 4.5em;
+    
+    }
+    #image {
+        min-width: 100px;
+        height: 100px;
+    }
+    #botao-menu {
+        display: flex;
+    }
+
+    #menuRigth {
+        top: 70px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+        position: fixed;
+    }
+    #habilidades {
+        margin: 20px 0px;
+    }
+    .itensMenu {
+        width: 100%;
+        height: 40px;
+    }
+    #projeto {
+        margin: 20px auto;
+    }
+    #info-contato {
+         width: 60vw;
+    }
+}
+
+@media (max-width: 400px) {
+    #container {
+        width: 100vw;
+    }
+}
