@@ -53,6 +53,32 @@ setTimeout(() => {
     }, 500)
 }, text.length * inteval)
 
+fetch("dadosProjetos.json").then((response)=> {
+    response.json().then((dados)=> {
+     
+        let itens = dados.projetosList;
+        for (let i=0; i < 3;i++) {
+   
+            console.log(itens[i].image);
+                document.getElementById("area-project").innerHTML += `
+                <a href="${itens[i].link}" target="_blank" ><article class="projeto" id="section-projeto" style="background-image: url('${itens[i].image}');">
+                                <div class="area-texto-descricao">${itens[i].descricao}</div>
+                            </article></a>
+                `
+                document.querySelectorAll(".projeto").forEach((element)=> {
+                    element.addEventListener("mouseover", (iten)=> {
+                            iten.currentTarget.querySelector(".area-texto-descricao").style.opacity= 1;  
+                        iten.currentTarget.querySelector(".area-texto-descricao").style.display= "flex";  
+                    })
+                    element.addEventListener("mouseleave", (iten)=> {
+                        iten.currentTarget.querySelector(".area-texto-descricao").style.opacity= 0;
+                    })
+                })
+                
+            }
+    })
+})
+
 function scrollAnimetion() {
     const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
     const menuHeight = document.querySelector("#menuStaick").clientHeight;

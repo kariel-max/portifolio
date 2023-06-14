@@ -1,0 +1,26 @@
+{
+    "projetosList":
+        [
+            {
+                "projeto": true,
+                "title": "amazon",
+                "descricao":"Este é um projeto criado com html, css e javascript",
+                "link":["https://cloneamazonkariel.netlify.app/"],
+                "image":["imagens/Amazon-Logo.png"]
+            },
+            {
+                "projeto":false,
+                "title": "",
+                "descricao":"Em breve",
+                "link":["#"],
+                "image":["imagens/addDocument.png"]
+            },
+            {
+                "projeto":false,
+                "title": "",
+                "descricao":"Em breve",
+                "link":["#"],
+                "image":["imagens/addDocument.png"]
+            }
+        ]
+}
