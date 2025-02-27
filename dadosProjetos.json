@@ -22,5 +22,54 @@
                 "link":["#"],
                 "image":["imagens/addDocument.png"]
             }
+        ],
+
+    "tecnologias":
+        [
+            {
+                "nome": "java",
+                "nivel": 10,
+                "image":["imagens/java.png"]
+            },
+            {
+                "nome": "javascript",
+                "nivel": 40,
+                "image":[""]
+            },
+            {
+                "nome": "typescript",
+                "nivel": 20,
+                "image":[""]
+            },
+            {
+                "nome": "nodejs",
+                "nivel": 15,
+                "image":[""]
+            },
+            {
+                "nome": "python",
+                "nivel": 5,
+                "image":[""]
+            },
+            {
+                "nome": "postgres",
+                "nivel": 30,
+                "image":[""]
+            },
+            {
+                "nome": "react",
+                "nivel": 5,
+                "image":[""]
+            },
+            {
+                "nome": "html",
+                "nivel": 85,
+                "image":[""]
+            },
+            {
+                "nome": "css",
+                "nivel": 75,
+                "image":[""]
+            }
         ]
 }
