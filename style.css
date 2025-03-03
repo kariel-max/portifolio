@@ -23,15 +23,14 @@ html {
 body {
     background-color: rgb(34, 31, 31);
     overflow-x: hidden;
-    background-color: #1a1919;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    margin-bottom: 150px;
+    background-color: #fafeff;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 #menuStaick {
     width: 100vw;
-    height: 70px;
+    height: 30px;
     background-color: rgba(0, 0, 0, 0.699);
 }
 
@@ -39,7 +38,7 @@ body {
     width: inherit;
     height: inherit;
     transition: .4s;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: #2b69fb;
     position: fixed;
     z-index: 1;
     display: flex;
@@ -69,12 +68,12 @@ body {
 }
 
 .logotipo .img {
-    min-width: 50px;
-    height: 50px;
+    min-width: 25px;
+    height: 25px;
     border-radius: 50%;
     font-family: Georgia, Times, 'Times New Roman', serif;
     border: 2px solid #CBB26A;
-    font-size: var(--fontImd-P);
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,17 +128,12 @@ a:has(.itensMenu):hover {
     height: 5px;
     background-color: #fff;
 }
-#backgroundImage {
-    background-image: url("imagens/pexels-pixabay-265152.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .panoPreto {
-    background-color: rgba(0, 0, 0, 0.877);
+    background-color: #0a001b;
 }
 
 #container {
-    width: 80%;
+    width: 95%;
     display: flex;
     margin: auto;
     align-items: center;
@@ -187,18 +181,21 @@ a:has(.itensMenu):hover {
 
 #image {
     min-width: 200px;
-    height: 200px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Georgia, Times, 'Times New Roman', serif;
     box-sizing: content-box;
-    padding: 20px;
     margin: 10px;
     font-size: var(--fontDaImgBanner);
     border: 5px solid #CBB26A;
     border-radius: 50%;
     color: #665112;
+}
+#image img{
+    width: inherit;
+    height: inherit;
 }
 
 #section-buttons-contact {
@@ -243,9 +240,32 @@ a:has(.itensMenu):hover {
     transition: all ease 0.3s;
     opacity: 0.7;
 }
+/* --------------------area ferramentas ------------------------*/
 
+#Area-ferramentas {
+    margin: auto;
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+#ferramentas-trabalho {
+    margin: auto;
+}
+.image-tec{
+    padding: 20px;
+    margin-top: 20px;
+}
+.image-tec img{
+    width: 90px;
+}
+
+/*----------------- area sobre -----------------*/
 #section-sobre {
-    padding: 50px 0px;
+    margin: auto;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #area-sobre {
@@ -323,9 +343,24 @@ a:has(.itensMenu):hover {
 }
 
 #title {
-    font-size: 1.9em;
+    margin: auto;
+    font-size: 3em;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+}
+#sub-title {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*-------------- area projetos----------- */
+
+#section-projects {
+    margin: auto;
 }
 
 #area-project {
@@ -336,10 +371,11 @@ a:has(.itensMenu):hover {
 }
 
 .projeto {
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 500px;
     margin: 20px;
-    border-radius: 10px;
+    border: 20px, solid,rgb(141, 136, 136);
+    border-radius: 30px;
     background-color: rgb(53, 54, 54);
     background-size: 80%;
     background-repeat: no-repeat;
@@ -357,20 +393,26 @@ a:has(.itensMenu):hover {
     padding: 10px;
     height: inherit;
     width: inherit;
-    border-radius: inherit;
+    border-radius: 30px;
     background-color: rgba(15, 15, 15, 0.747);
-}
-#projeto:hover {
-    opacity: 0.7;
 }
 
 #section-contatos {
-    margin: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0a001b;
+    padding-top: 80px;
+    padding-bottom: 140px;
 }
+.svg-curve {
+    width: 100%;
+    height: 50px;
+    margin-bottom: -10px;
+    transform: rotate(180deg);
 
+}
 #info-contato {
     width: 500px;
     display: flex;
@@ -381,7 +423,7 @@ a:has(.itensMenu):hover {
 .styleInput {
     padding: 10px 10px;
     border-radius: 10px;
-    background-color: #0000002d;
+    background-color: #c3c3c4;
     border: none;
     margin: 10px;
     font-size: 1.2em;
@@ -396,8 +438,8 @@ a:has(.itensMenu):hover {
     border-radius: 14px;
     border: none;
     color: rgba(255, 255, 255, 0.562);
-    background-color: #00000069;
-    box-shadow: 0px 0px 10px rgba(20, 187, 216, 0.815);
+    background-color: #3403b8e0;
+    box-shadow: 0px 0px 10px rgba(187, 226, 216, 0.466);
 }
 
 #button-form:hover {

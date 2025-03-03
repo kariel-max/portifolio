@@ -34,42 +34,42 @@
             {
                 "nome": "javascript",
                 "nivel": 40,
-                "image":[""]
+                "image":["imagens/java-script.png"]
             },
             {
                 "nome": "typescript",
                 "nivel": 20,
-                "image":[""]
+                "image":["imagens/typescript.png"]
             },
             {
                 "nome": "nodejs",
                 "nivel": 15,
-                "image":[""]
+                "image":["imagens/nodejs.png"]
             },
             {
                 "nome": "python",
                 "nivel": 5,
-                "image":[""]
+                "image":["imagens/python.png"]
             },
             {
                 "nome": "postgres",
                 "nivel": 30,
-                "image":[""]
+                "image":["imagens/postgre.png"]
             },
             {
                 "nome": "react",
                 "nivel": 5,
-                "image":[""]
+                "image":["imagens/science.png"]
             },
             {
                 "nome": "html",
                 "nivel": 85,
-                "image":[""]
+                "image":["imagens/html.png"]
             },
             {
                 "nome": "css",
                 "nivel": 75,
-                "image":[""]
+                "image":["imagens/css-3.png"]
             }
         ]
 }

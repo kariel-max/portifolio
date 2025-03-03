@@ -4,7 +4,7 @@
 //
 const target = document.querySelectorAll("#container")
 const el = document.querySelector("#area-text span");
-const text = "Kariel Emanoel";
+const text = "Bem-vindo!";
 const inteval = 300;
 let lastScrollTop = 0;
 let espacoSection = 100;
@@ -55,11 +55,29 @@ setTimeout(() => {
 
 fetch("dadosProjetos.json").then((response)=> {
     response.json().then((dados)=> {
+        let itens = dados.tecnologias;
+        let Qimage = itens.length
+        for(let i = 0; i < Qimage; i++) {
+            document.getElementById("Area-ferramentas").innerHTML += `<section class="image-tec"><img src="${itens[i].image}" alt=""></section>`
+            console.log("foi", Qimage)
+
+            // document.querySelectorAll("image-tec").forEach((element)=> {
+            //     element.addEventListener("mouseover", (iten)=> {
+            //         iten.currentTarget.querySelector("image-tec").style.display ="flex";
+            //     })
+            // })
+        }
+
+    })
+})
+
+//--------------------------- area de projetos
+
+fetch("dadosProjetos.json").then((response)=> {
+    response.json().then((dados)=> {
      
         let itens = dados.projetosList;
         for (let i=0; i < 3;i++) {
-   
-            console.log(itens[i].image);
                 document.getElementById("area-project").innerHTML += `
                 <a href="${itens[i].link}" target="_blank" ><article class="projeto" id="section-projeto" style="background-image: url('${itens[i].image}');">
                                 <div class="area-texto-descricao">${itens[i].descricao}</div>
