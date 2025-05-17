@@ -17,34 +17,44 @@ html {
     --fontDoNome-G: 60px; 
     --fontDoTextBanner: 30px;
     --fontDaImgBanner: 6em;
+    --colorTextPrin:#ffff;
+    --colorTextSecon: #ADB5BD;
+    --colorFundo: #172029;
+    --tamanhoMenuTop: 70px
 
 }
 
 body {
     background-color: rgb(34, 31, 31);
     overflow-x: hidden;
-    background-color: #fafeff;
-    font-family: Montserrat,Arial, Helvetica, sans-serif;
-    color: black;
+    background-color: var(--colorFundo);
+    font-family: "Roboto Mono", monospace,"Montserrat", sans-serif;
+    color: var(--colorTextSecon);
 }
 
 #menuStaick {
+    margin-top: -90px;
     width: 100vw;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.699);
+    height: var(--tamanhoMenuTop);
 }
 
 #sectionMenu {
     width: inherit;
     height: inherit;
-    transition: .4s;
-    background-color: #2b69fb;
     position: fixed;
+    margin-top: 90px;
     z-index: 1;
+    transition: .4s;
+    padding: 20px 0px;
+}
+#blockHeader {
+    width: inherit;
+    height: inherit;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
     padding: 0px 150px;
+    margin-bottom:20px;
 }
 
 .menuAnimetion {
@@ -53,31 +63,13 @@ body {
 }
 
 #menuLeft {
+    height: inherit;
     display: flex;
-    align-items: center;
+    align-items:center ;
 }
-
-.logotipo {
-    display: flex;
-    color: #CBB26A;
-}
-
-.areaNameText {
-    display: flex;
-    align-items: center;
-}
-
-.logotipo .img {
-    min-width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    border: 2px solid #CBB26A;
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+#menuLeft img {
+    min-width: 100px;
+    height: auto;
 }
 
 #menuRigth {
@@ -105,10 +97,9 @@ a:has(.itensMenu):hover {
 }
 
 .show {
-    border-bottom: 5px solid #CBB26A;
+    border: 2px solid #ffff;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.322);
-    color: #CBB26A;
+    
 }
 
 #botao-menu {
@@ -128,10 +119,11 @@ a:has(.itensMenu):hover {
     height: 5px;
     background-color: #fff;
 }
-.panoPreto {
-    background-color: #0a001b;
+.hr {
+    height: 1px;
+    background-color: #fff;
+    width: 100vw;
 }
-
 #container {
     width: 95%;
     display: flex;
@@ -139,113 +131,45 @@ a:has(.itensMenu):hover {
     align-items: center;
     margin-bottom: 50px;
 }
-
-[data-mostrar="primeiro"] {
-    transition: 2.3s;
-    opacity: 0;
-    transform: translate3d(-100vw, 0px, 0px);
-}
-
-[data-mostrar="segundo"] {
-    transition: 3s;
-    opacity: 0;
-    transform: translate3d(-100vw, 0px, 0px);
-}
-
 .mostrar {
     opacity: 1;
     transform: translate3d(0vw, 0px, 0px);
 }
-
-#section-banner {
+#backgroundImage {
     width: 100%;
-    height: calc(100vh - 70px);
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
-    font-size: var(--fontDoTextBanner);
-}
-
-.autoEscrita {
-    font-size: var(--fontDoNome-G);
-    display: flex;
-    color: #CBB26A;
-}
-
-.marcador {
-    background-color: blue;
-    max-height: 60px;
-    width: 5px;
-}
-
-#image {
-    min-width: 200px;
-    height: 250px;
+    height: 100vh;
+    background-image: url("imagens/ChatGPT Image 16 de mai. de 2025, 20_15_37.png");
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    box-sizing: content-box;
-    margin: 10px;
-    font-size: var(--fontDaImgBanner);
-    border: 5px solid #CBB26A;
-    border-radius: 50%;
-    color: #665112;
+    background-position: right;
+    background-size: 60% 99%;
+    background-repeat: no-repeat;
 }
-#image img{
+#section-banner {
     width: inherit;
-    height: inherit;
-}
-
-#section-buttons-contact {
-    position: absolute;
+    height:inherit;
     display: flex;
     align-items: center;
-    height: 100%;
-    transition: .4s;
+    justify-content: center;
+    font-size: var(--fontDoTextBanner);
 }
-
-#section-botao {
-    transition: all ease .5s;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
+#area-text {
+    text-align: center;
+    color: var(--colorTextSecon);
+    font-size: var(--fontDoTextBanner);
 }
-
-.redesSociais {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.redesSociais img {
-    cursor: pointer;
-    margin: 5px;
-    width: 45px;
-    height: 45px;
-}
-
-.mostrarEsconder {
-    transition: all ease .5s;
-    cursor: pointer;
-    font-size: 2em;
-    color: rgba(0, 47, 255, 0.445);
-    padding: 10px;
-    transform: rotate(180deg);
-}
-
-.redesSociais img:hover {
-    transition: all ease 0.3s;
-    opacity: 0.7;
+#area-text > span {
+    font-size: var(--fontDoNome-G);
+    color: var(--colorTextPrin);
 }
 /* --------------------area ferramentas ------------------------*/
-
 #Area-ferramentas {
     margin: auto;
     width: inherit;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 #ferramentas-trabalho {
@@ -323,15 +247,6 @@ a:has(.itensMenu):hover {
         background-position: 0%, 50%;
     }
 }
-
-.nivel {
-    animation: background-nivel 10s infinite;
-    margin-top: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-image: linear-gradient(45deg, blue, rgb(36, 159, 216), blue);
-    background-size: 300% 300%;
-}
 #localizacao {
     line-height: 25px;
     margin-bottom: 20px;
@@ -344,7 +259,7 @@ a:has(.itensMenu):hover {
 
 #title {
     margin: auto;
-    font-size: 3em;
+    font-size: var(--fontDoNome-G);
     text-align: center;
     font-weight: 500;
 }
@@ -354,7 +269,7 @@ a:has(.itensMenu):hover {
     margin-bottom: 40px;
     text-align: center;
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--fontDoTextBanner);
 }
 
 /*-------------- area projetos----------- */
@@ -510,8 +425,41 @@ a:has(.itensMenu):hover {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+    :root {
+        --fontDoNome-G: 35px;
+        --fontDoTextBanner: 15px;
+    }
     #container {
         width: 100vw;
+    }
+    #blockHeader {
+        padding:0px;
+        margin-bottom: 0px;
+    }
+    #sectionMenu {
+        padding: 0px;
+    }
+    #menuLeft img {
+        width: 200px;
+        height: auto;
+        
+    }
+    #backgroundImage {
+        background-image: url("imagens/capaCel.png");
+        background-size: 100% 95%;
+        background-repeat: no-repeat;
+        align-items: baseline;
+        margin-top: 70px
+    }
+    #area-text {
+        margin-top: 100px;
+    }
+    /* -------------projeto--------- */
+
+    .projeto {
+        width: 250px;
+        height: 400px;
+
     }
 }

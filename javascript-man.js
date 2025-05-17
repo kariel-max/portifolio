@@ -3,27 +3,10 @@
 //
 //
 const target = document.querySelectorAll("#container")
-const el = document.querySelector("#area-text span");
-const text = "Bem-vindo!";
-const inteval = 300;
 let lastScrollTop = 0;
 let espacoSection = 100;
 let botaoMenu = true;
 let contadorSection = false;
-
-function textAuto(el, text, inteval) {
-    const char = text.split("").reverse();
-
-    el.innerHTML = '';
-    const type = setInterval(() => {
-        if (!char.length) {
-            return clearInterval(type)
-        }
-        const next = char.pop();
-        el.innerHTML += next;
-    }, inteval)
-}
-textAuto(el, text, inteval)
 
 window.onresize = () => {
     if (document.querySelector("body").clientWidth > 840) {
@@ -41,25 +24,12 @@ document.querySelector("#botao-menu").addEventListener("click", ()=> {
     }
 })
 
-setTimeout(() => {
-    setInterval(() => {
-        let marcador = document.querySelector(".marcador")
-        let porMarcador = document.querySelector(".autoEscrita div")
-        if (marcador) {
-            document.querySelector(".marcador").classList.remove("marcador")
-        } else {
-            porMarcador.classList.add("marcador")
-        }
-    }, 500)
-}, text.length * inteval)
-
 fetch("dadosProjetos.json").then((response)=> {
     response.json().then((dados)=> {
         let itens = dados.tecnologias;
         let Qimage = itens.length
         for(let i = 0; i < Qimage; i++) {
             document.getElementById("Area-ferramentas").innerHTML += `<section class="image-tec"><img src="${itens[i].image}" alt=""></section>`
-            console.log("foi", Qimage)
 
             // document.querySelectorAll("image-tec").forEach((element)=> {
             //     element.addEventListener("mouseover", (iten)=> {
@@ -127,17 +97,6 @@ function scrollAnimetion() {
         })
     })
 }
-
-document.querySelector(".mostrarEsconder").addEventListener("click", () => {
-    if (document.querySelector(".mostrarEsconder").style.transform === "rotate(180deg)") {
-        document.querySelector("#section-botao").style.transform = `translateX(-${document.querySelector(".redesSociais").clientWidth}px)`
-        document.querySelector(".mostrarEsconder").style.transform = "rotate(0deg)"
-    } else {
-        document.querySelector(".mostrarEsconder").style.transform = "rotate(180deg)"
-        document.querySelector("#section-botao").style.transform = "translateX(0px)"
-    }
-})
-
 window.addEventListener("scroll", (e) => {
     scrollAnimetion()
 

@@ -1,75 +1,72 @@
 {
-    "projetosList":
-        [
-            {
-                "projeto": true,
-                "title": "amazon",
-                "descricao":"Este é um projeto criado com html, css e javascript",
-                "link":["https://cloneamazonkariel.netlify.app/"],
-                "image":["imagens/Amazon-Logo.png"]
-            },
-            {
-                "projeto":false,
-                "title": "",
-                "descricao":"Em breve",
-                "link":["#"],
-                "image":["imagens/addDocument.png"]
-            },
-            {
-                "projeto":false,
-                "title": "",
-                "descricao":"Em breve",
-                "link":["#"],
-                "image":["imagens/addDocument.png"]
-            }
-        ],
-
-    "tecnologias":
-        [
-            {
-                "nome": "java",
-                "nivel": 10,
-                "image":["imagens/java.png"]
-            },
-            {
-                "nome": "javascript",
-                "nivel": 40,
-                "image":["imagens/java-script.png"]
-            },
-            {
-                "nome": "typescript",
-                "nivel": 20,
-                "image":["imagens/typescript.png"]
-            },
-            {
-                "nome": "nodejs",
-                "nivel": 15,
-                "image":["imagens/nodejs.png"]
-            },
-            {
-                "nome": "python",
-                "nivel": 5,
-                "image":["imagens/python.png"]
-            },
-            {
-                "nome": "postgres",
-                "nivel": 30,
-                "image":["imagens/postgre.png"]
-            },
-            {
-                "nome": "react",
-                "nivel": 5,
-                "image":["imagens/science.png"]
-            },
-            {
-                "nome": "html",
-                "nivel": 85,
-                "image":["imagens/html.png"]
-            },
-            {
-                "nome": "css",
-                "nivel": 75,
-                "image":["imagens/css-3.png"]
-            }
-        ]
+    "projetosList": [
+        {
+            "projeto": true,
+            "title": "amazon",
+            "descricao": "Este é um projeto criado com html, css e javascript",
+            "link": ["https://cloneamazonkariel.netlify.app/"],
+            "image": ["imagens/Amazon-Logo.png"]
+        },
+        {
+            "projeto": false,
+            "title": "",
+            "descricao": "Em breve",
+            "link": ["#"],
+            "image": ["imagens/addDocument.png"]
+        },
+        {
+            "projeto": false,
+            "title": "",
+            "descricao": "Em breve",
+            "link": ["#"],
+            "image": ["imagens/addDocument.png"]
+        }
+    ],
+    "tecnologias": [
+        {
+            "nome": "java",
+            "nivel": 10,
+            "image": ["imagens/java.png"]
+        },
+        {
+            "nome": "javascript",
+            "nivel": 40,
+            "image": ["imagens/java-script.png"]
+        },
+        {
+            "nome": "typescript",
+            "nivel": 20,
+            "image": ["imagens/typescript.png"]
+        },
+        {
+            "nome": "nodejs",
+            "nivel": 15,
+            "image": ["imagens/nodejs.png"]
+        },
+        {
+            "nome": "python",
+            "nivel": 5,
+            "image": ["imagens/python.png"]
+        },
+        {
+            "nome": "postgres",
+            "nivel": 30,
+            "image": ["imagens/postgre.png"]
+        },
+        {
+            "nome": "react",
+            "nivel": 5,
+            "image": ["imagens/science.png"]
+        },
+        {
+            "nome": "html",
+            "nivel": 85,
+            "image": ["imagens/html.png"]
+        },
+        {
+            "nome": "css",
+            "nivel": 75,
+            "image": ["imagens/css-3.png"]
+        }
+    ]
 }
