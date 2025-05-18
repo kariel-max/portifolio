@@ -15,17 +15,16 @@ html {
 :root {
     --fontImd-P: 1.9em;
     --fontDoNome-G: 60px; 
-    --fontDoTextBanner: 30px;
+    --fontDoTextBanner: 25px;
     --fontDaImgBanner: 6em;
     --colorTextPrin:#ffff;
     --colorTextSecon: #ADB5BD;
-    --colorFundo: #172029;
+    --colorFundo: #021220;
     --tamanhoMenuTop: 70px
 
 }
 
 body {
-    background-color: rgb(34, 31, 31);
     overflow-x: hidden;
     background-color: var(--colorFundo);
     font-family: "Roboto Mono", monospace,"Montserrat", sans-serif;
@@ -53,7 +52,7 @@ body {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
-    padding: 0px 150px;
+    padding: 0px 25px;
     margin-bottom:20px;
 }
 
@@ -68,7 +67,7 @@ body {
     align-items:center ;
 }
 #menuLeft img {
-    min-width: 100px;
+    max-width: 500px;
     height: auto;
 }
 
@@ -138,24 +137,30 @@ a:has(.itensMenu):hover {
 #backgroundImage {
     width: 100%;
     height: 100vh;
-    background-image: url("imagens/ChatGPT Image 16 de mai. de 2025, 20_15_37.png");
+    background-image: url("imagens/capaPortifolio.png");
     margin-top: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-position: right;
-    background-size: 60% 99%;
+    justify-content: baseline;
+    background-position: center;
+    background-size: 100% 110%;
     background-repeat: no-repeat;
+}
+.panoPreto {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 #section-banner {
     width: inherit;
     height:inherit;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
     font-size: var(--fontDoTextBanner);
 }
 #area-text {
+    width: 700px;
     text-align: center;
     color: var(--colorTextSecon);
     font-size: var(--fontDoTextBanner);
@@ -163,6 +168,7 @@ a:has(.itensMenu):hover {
 #area-text > span {
     font-size: var(--fontDoNome-G);
     color: var(--colorTextPrin);
+    font-weight: 500;
 }
 /* --------------------area ferramentas ------------------------*/
 #Area-ferramentas {
